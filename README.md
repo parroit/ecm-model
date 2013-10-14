@@ -1,4 +1,4 @@
-# ecm-model [![Build Status](https://secure.travis-ci.org/parroit/ecm-model.png?branch=master)](http://travis-ci.org/parroit/ecm-model)
+# ecm-model [![Build Status](https://secure.travis-ci.org/parroit/ecm-model.png?branch=master)](http://travis-ci.org/parroit/ecm-model) [![Npm module](https://badge.fury.io/js/ecm-model.png)](https://npmjs.org/package/ecm-model)
 
 The best project ever.
 
