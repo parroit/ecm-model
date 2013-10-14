@@ -26,12 +26,27 @@ describe('messageParser', function () {
                 expect(schema).to.be.a('object');
             });
         });
+
+        describe("exam", function () {
+            it("is defined",function(){
+                var schema = ecm_model.schemas.exam;
+                expect(schema).not.to.be.equal(null);
+                expect(schema).to.be.a('object');
+            });
+        });
     });
 
     describe("models", function () {
         describe("User", function () {
             it("is defined",function(){
                 var model = ecm_model.models.User;
+                expect(model).not.to.be.equal(null);
+                expect(model).to.be.a('function');
+            });
+        });
+        describe("Exam", function () {
+            it("is defined",function(){
+                var model = ecm_model.models.Exam;
                 expect(model).not.to.be.equal(null);
                 expect(model).to.be.a('function');
             });
