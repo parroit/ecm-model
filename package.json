@@ -1,0 +1,42 @@
+{
+    "name": "ecm-model",
+    "description": "The best project ever.",
+    "version": "0.1.0",
+    "homepage": "https://github.com/parroit/ecm-model",
+    "author": {
+        "name": "parroit",
+        "email": "andrea.parodi@ebansoftware.net"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/parroit/ecm-model.git"
+    },
+    "bugs": {
+        "url": "https://github.com/parroit/ecm-model/issues"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/parroit/ecm-model/blob/master/LICENSE-MIT"
+        }
+    ],
+    "main": "lib/ecm-model",
+    "engines": {
+        "node": ">= 0.10.0"
+    },
+    "scripts": {
+        "test": "grunt"
+    },
+    "devDependencies": {
+        "grunt": "~0.4.1",
+        "grunt-mocha-test": "~0.7.0",
+        "chai": "~1.8.0",
+        "sinon": "~1.7.3",
+        "sinon-chai": "~2.4.0"
+    },
+    "keywords": [],
+    "dependencies": {
+        "mongoose": "~3.6.20"
+
+    }
+}
