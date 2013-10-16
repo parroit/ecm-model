@@ -41,6 +41,13 @@ describe('messageParser', function () {
                 expect(schema).to.be.a('object');
             });
         });
+        describe("takenQuestion", function () {
+            it("is defined",function(){
+                var schema = ecm_model.schemas.takenQuestion;
+                expect(schema).not.to.be.equal(null);
+                expect(schema).to.be.a('object');
+            });
+        });
     });
 
     describe("models", function () {
@@ -61,6 +68,13 @@ describe('messageParser', function () {
         describe("TakenExam", function () {
             it("is defined",function(){
                 var model = ecm_model.models.TakenExam;
+                expect(model).not.to.be.equal(null);
+                expect(model).to.be.a('function');
+            });
+        });
+        describe("TakenQuestion", function () {
+            it("is defined",function(){
+                var model = ecm_model.models.TakenQuestion;
                 expect(model).not.to.be.equal(null);
                 expect(model).to.be.a('function');
             });
