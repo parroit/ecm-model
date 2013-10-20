@@ -133,7 +133,7 @@ describe('messageParser', function () {
                 var u = new User(_.extend({},testData, {prof_dip:"PA"}));
 
                 u.validate(function(err){
-                    expect(err.errors.prof_dip.type).to.be.equal("'max %s', 1");
+                    expect(err.errors.prof_dip.type).to.be.equal("!'max %s', 1");
                     done();
                 });
 
