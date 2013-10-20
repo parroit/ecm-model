@@ -5,7 +5,7 @@ var ecm_model = require('../lib/ecm-model.js');
 var expect = require('chai').expect;
 
 var path = require('path');
-var _ = require('underscore');
+var _ = require('lodash');
 
 require('chai').should();
 
@@ -134,6 +134,28 @@ describe('messageParser', function () {
 
                 u.validate(function(err){
                     expect(err.errors.prof_dip.type).to.be.equal("!'max %s', 1");
+                    done();
+                });
+
+            });
+
+            it("it require prof_dip in accepted values",function(done){
+                var u = new User(_.extend({},testData, {prof_dip:"R"}));
+
+                u.validate(function(err){
+                   //console.dir(err.errors.prof_dip);
+                    expect(err.errors.prof_dip.type).to.be.equal("!'accept one of %s', 'Libero professionista,Dipendente,Convenzionato,Privo di occupazione'");
+                    done();
+                });
+
+            });
+
+            it("it require professione in accepted values",function(done){
+                var u = new User(_.extend({},testData, {professione:"999"}));
+
+                u.validate(function(err){
+                    //console.dir(err.errors.prof_dip);
+                    expect(err.errors.professione.type).to.be.equal("!'accept one of %s', '"+ _.values(require("../lib/helpers/professioni"))+"'");
                     done();
                 });
 

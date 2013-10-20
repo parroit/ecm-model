@@ -37,6 +37,6 @@
   "keywords": [],
   "dependencies": {
     "mongoose": "~3.6.20",
-    "underscore": "~1.5.2"
+    "lodash": "~2.2.1"
   }
 }
